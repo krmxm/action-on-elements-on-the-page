@@ -40,8 +40,16 @@ const box = document.getElementById('box'),
 // hearts[0].before(div);
 // hearts[0].after(div);
 
-wrapper.insertBefore(div, hearts[1]); // устаревшее вместо prepend, before, after
+// wrapper.insertBefore(div, hearts[1]); // устаревшее вместо prepend, before, after
 
 // circles[0].remove(); // удаляет элемент со страницы
+// wrapper.removeChild(hearts[1]); // устаревший метод
 
-hearts[0].replaceWith(circles[0]); // один элемент заменяется другим, второй элемент переместился
+// hearts[0].replaceWith(circles[0]); // кружочек вместо сердечка
+// // один элемент заменяется другим, второй элемент переместился
+// wrapper.replaceChild(circles[0], hearts[0]); // устаревший метод
+
+div.innerHTML = "<h1>Hello World</h1>";
+// div.textContent = "Hello";
+
+div.insertAdjacentHTML('afterbegin', '<h2>Hello</h2>'); // вставить соседний HTML
